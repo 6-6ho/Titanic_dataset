@@ -29,7 +29,7 @@ print("Chi-Square Statistic:", chi2)
 print("p-value:", p)
 # 범주형 변수 간의 상관관계는 카이제곱 독립성 검정, 크래머의 V를 사용함
 
-# 자유도 설정
+# 자유도 설정 // (행의 개수 - 1) * (열의 개수 - 1)
 degrees_of_freedom = (correlation_table.shape[0] - 1) * (correlation_table.shape[1] - 1)
 
 # 유의수준 설정
@@ -44,10 +44,7 @@ if chi2 > critical_value:
 else:
     print("작다")
 
-
-
-
-# 상관관계가 있다면 두개의 변수에 대해서 생존의 상관관계
+# pclass와 생존 상관관계
 
 # 성별과 생존 상관관계
 
